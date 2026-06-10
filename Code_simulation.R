@@ -5,6 +5,29 @@ library(ggplot2)
 # load dataset  -----------------------------------------------------------
 
 load("Data_for_simulation_withoutID.RData")
+# ============================================================================
+# Variable Dictionary
+# ============================================================================
+# 
+# base_age          : maternal age at pregnancy attempt
+#
+# x1                : 12-month average PM2.5 exposure before pregnancy attempt
+#                    (μg/m³)
+#
+# x2                : Pregnancy period PM2.5 exposure (μg/m³)
+#
+# r.infert.idv      : Individual-level infertility rate
+#
+# r.mics            : Miscarriage rate
+#
+# r.stb.idv         : Individual-level stillbirth rate
+#
+# r.infdeath.idv    : Individual-level infant mortality rate
+#
+# survey.weight     : Sampling weight from Demographic and Health Survey (DHS)
+#
+# ============================================================================
+
 
 dta$agegr=cut(dta$base_age+1,breaks = c(0,20,30,35,Inf),
               right = F,include.lowest = F)
